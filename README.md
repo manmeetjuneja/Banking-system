@@ -67,3 +67,31 @@ bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic
 - Notification Service should log the event.
 ---
 
+## Structure to Refer.
+```
+banking-system/
+│
+├── account-service/                 # 🏦 Manage bank accounts
+│   ├── src/main/java/com/example/account
+│   │   ├── model/Account.java        # Entity
+│   │   ├── controller/AccountController.java
+│   │   └── repository/AccountRepository.java
+│   └── resources/application.yml
+│
+├── transaction-service/             # 💰 Handle deposits & withdrawals
+│   ├── src/main/java/com/example/transaction
+│   │   ├── model/Transaction.java    # Entity
+│   │   ├── controller/TransactionController.java
+│   │   ├── repository/TransactionRepository.java
+│   │   └── config/KafkaProducerConfig.java
+│   └── resources/application.yml
+│
+├── notification-service/             # 📩 Listens to Kafka events
+│   ├── src/main/java/com/example/notification
+│   │   └── service/TransactionConsumer.java
+│   └── resources/application.yml
+│
+├── docker-compose.yml (optional)     # For PostgreSQL & Kafka
+└── README.md                         # Project documentation
+```
+---
