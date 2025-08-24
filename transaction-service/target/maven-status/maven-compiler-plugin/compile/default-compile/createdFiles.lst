@@ -1,0 +1,6 @@
+com\example\transaction\model\Transaction$TransactionBuilder.class
+com\example\transaction\config\KafkaProducerConfig.class
+com\example\transaction\controller\TransactionController.class
+com\example\transaction\model\Transaction.class
+com\example\transactionservice\TransactionserviceApplication.class
+com\example\transaction\repository\TransactionRepository.class
